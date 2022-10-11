@@ -1,0 +1,6 @@
+*.db
+__pycache__
+static/images/posts
+static/images/icons/*
+!default_user_icon.png
+sqlite-tool.py

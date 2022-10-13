@@ -29,37 +29,8 @@ pathlib.Path("static/").mkdir(parents=True, exist_ok=True)
 @protected
 async def index_page(request):
     """Display all posts."""
-    all_posts = postDAO.fetch_all_display()
+    
     return html(posts.show_posts(all_posts))
-
-@app.get("/u/<username>")
-@protected
-async def user_page(request, username: str):
-    """Display all posts from the given user."""
-    user = userDAO.get_user(username)
-    all_posts = postDAO.fetch_by_user(unquote(username))
-    return html(posts.show_posts(all_posts, user=user))
-
-@app.get("/write")
-@protected
-async def write_page(request):
-    """Let user write a new text post."""
-    return html(posts.create_page())
-
-@app.get("/upload")
-@protected
-async def write_page(request):
-    """Let user create a new image post."""
-    return html(posts.create_image_page())
-
-@app.get("/profile")
-@protected
-async def edit_profile(request):
-    """Let user see and edit their own profile page."""
-    user = userDAO.get_user(request.ctx.username)
-    return html(profile.edit_profile(user))
-
-
 
 
 @app.post("/create_tournaments")

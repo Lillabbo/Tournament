@@ -1,13 +1,11 @@
-from urllib.parse import quote
 import dominate
 from dominate.tags import *
 
 from sanic import Sanic
 from config import APP_NAME
 
-import pages.userprofile as userprofile
-from pages.menu import show_menu
-import database.post as post
+
+
 
 def show_posts(posts=[], user=None):
     app = Sanic.get_app(APP_NAME)

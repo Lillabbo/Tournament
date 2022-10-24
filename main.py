@@ -16,15 +16,15 @@ app.ctx.msg = ""
 
 # Endpoints
 @app.get("/")
-@protected
+
 async def index_page(request):
     """Display all posts."""
     
-    return html(frontpage.show_posts(all_posts))
+    return html(frontpage.frontpage())
 
 
 @app.post("/create_tournaments")
-@protected
+
 async def tournament(request):
     """create a new tournament"""
     if not ('title' in request.form and
@@ -46,6 +46,7 @@ async def tournament(request):
 
     return redirect("/")
 
+if __name__ == '__main__':
+    
 
-
-app.run(host='localhost', port=8080)
+    app.run(host='localhost', port=8080)

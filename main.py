@@ -14,11 +14,6 @@ app = Sanic(config.APP_NAME)
 app.static('static/', 'static')
 app.ctx.msg = ""
 
-# Create image folders
-pathlib.Path("static/").mkdir(parents=True, exist_ok=True)
-pathlib.Path("static/").mkdir(parents=True, exist_ok=True)
-
-
 # Endpoints
 @app.get("/")
 @protected

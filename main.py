@@ -18,7 +18,7 @@ app.ctx.msg = ""
 @app.get("/")
 
 async def index_page(request):
-    """Display all posts."""
+    """display frontpage"""
     
     return html(frontpage.frontpage())
 

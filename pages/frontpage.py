@@ -16,6 +16,7 @@ def frontpage():
     with doc.head:
         menu_items = [
             ('sc2 tournaments', '/'),
+            ('create tournament','/create_tournaments')
         ]
         show_menu(menu_items)
         

@@ -13,7 +13,7 @@ from pages.menu import show_menu
 
 def frontpage():
     doc = dominate.document(title="SC2 Tournaments")
-    with doc:
+    with doc.head:
         menu_items = [
             ('sc2 tournaments', '/'),
         ]

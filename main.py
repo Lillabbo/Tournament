@@ -15,6 +15,15 @@ app.static('static/', 'static')
 app.ctx.msg = ""
 
 
+<<<<<<< HEAD
+=======
+class tournement:
+    def __init__(self, name, contestant, matches, description):
+        self.name = name
+        self.contestant = contestant
+        self.matches = matches
+        self.description = description
+>>>>>>> f950f706b3d82c8d81749f04d462ffa07a9c45c1
 
 # Endpoints
 @app.get("/")

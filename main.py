@@ -14,6 +14,8 @@ app = Sanic(config.APP_NAME)
 app.static('static/', 'static')
 app.ctx.msg = ""
 
+
+
 # Endpoints
 @app.get("/")
 

@@ -73,3 +73,11 @@ a.button {
     max-width: 200px;
     max-height: 200px;
 }
+
+.show_Create_Tournamets {
+    list-style: none;
+    margin-bottom: 20px;
+	width:99.5%;
+	background-color:#b87710;
+	height:25px;
+}

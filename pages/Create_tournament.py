@@ -17,3 +17,14 @@ def Create_Tournamets():
         show_menu(menu_items)
                        
     return doc.render()
+
+def show_Tournamets(menu_create_tournament_items):
+    with ul(cls='Create_Tournamets'):
+        for (txt, lnk) in menu_create_tournament_items:
+            with div(cls='menu_create_tournament_items'):
+                    a(txt, cls='button', href=lnk)
+
+def add_contestant():
+
+
+def 

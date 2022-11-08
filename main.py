@@ -16,7 +16,7 @@ app.ctx.msg = ""
 
 
 class tournement:
-    def __init__(self, name, contestant, matches, description)
+    def __init__(self, name, contestant, matches, description):
         self.name = name
         self.contestant = contestant
         self.matches = matches
@@ -42,4 +42,3 @@ if __name__ == '__main__':
     
 
     app.run(host='localhost', port=8080)
-

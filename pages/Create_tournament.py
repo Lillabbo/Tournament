@@ -14,17 +14,17 @@ def Create_Tournamets():
             ('sc2 tournaments', '/'),
             ('sc2 Create tournaments', '/'),
         ]
+    with
         show_menu(menu_items)
                        
     return doc.render()
 
-def show_Tournamets(menu_create_tournament_items):
+def show_Tournamets():
     with ul(cls='Create_Tournamets'):
-        for (txt, lnk) in menu_create_tournament_items:
-            with div(cls='menu_create_tournament_items'):
+        for (txt, lnk) in Create_Tournamets:
+            with div(cls='Create_Tournamets'):
                     a(txt, cls='button', href=lnk)
 
+
 def add_contestant():
-
-
-def 
+    import main class tournement

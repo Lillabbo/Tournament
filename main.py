@@ -8,6 +8,7 @@ import config
 
 # pages
 import pages.frontpage as frontpage
+import pages.Create_tournament as Create_tournament
 ###import pages.userprofile as profile###
 
 app = Sanic(config.APP_NAME)
@@ -15,15 +16,12 @@ app.static('static/', 'static')
 app.ctx.msg = ""
 
 
-<<<<<<< HEAD
-=======
 class tournement:
     def __init__(self, name, contestant, matches, description):
         self.name = name
         self.contestant = contestant
         self.matches = matches
         self.description = description
->>>>>>> f950f706b3d82c8d81749f04d462ffa07a9c45c1
 
 # Endpoints
 @app.get("/")
@@ -34,12 +32,12 @@ async def index_page(request):
     return html(frontpage.frontpage())
 
 
-@app.post("/create_tournaments")
+@app.get("/create_tournaments")
 
 async def tournament(request):
     """create a new tournament"""
 
-    return redirect("/")
+    return html(Create_tournament.show_Tournamets())
 
 if __name__ == '__main__':
     

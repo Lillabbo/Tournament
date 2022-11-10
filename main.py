@@ -28,7 +28,15 @@ class matches:
         self.contestant_A = contestant_A
         self.contestant_B = contestant_B
 
-
+# Input for dictionary
+def add_partisipants():
+    n= int(input("enter elemets"))
+    d={}
+    for i in range (n):
+        key=input("enter KEY: ")
+        value= input("enter value")
+        d[key]=value
+    print(d)
 
 
 # Endpoints

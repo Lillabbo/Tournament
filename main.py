@@ -23,6 +23,11 @@ class tournement:
         self.matches = matches
         self.description = description
 
+class matches:
+    def __init__(self, contestant_A,contestant_B, ):
+        self.contestant_A = contestant_A
+        self.contestant_B = contestant_B
+
 # Endpoints
 @app.get("/")
 

@@ -24,6 +24,8 @@ def show_Tournamets():
             with div(cls='Create_Tournamets'):
                     a(txt, cls='button', href=lnk)
 
-
 def add_contestant():
-    import main
+     with ul(cls='Add_contestant'):
+        for (txt, lnk) in add_contestant:
+            with div(cls='Add_contestant'):
+                    a(txt, cls='button', href=lnk)

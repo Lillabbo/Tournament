@@ -29,3 +29,4 @@ def add_contestant():
         for (txt, lnk) in add_contestant:
             with div(cls='Add_contestant'):
                     a(txt, cls='button', href=lnk)
+     

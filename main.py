@@ -8,25 +8,16 @@ import config
 
 # pages
 import pages.frontpage as frontpage
+import pages.Viewtournement as show_tournament
 import pages.Create_tournament as Create_tournament
 ###import pages.userprofile as profile###
-
+import pages.selfmade_classes as all_classes
 app = Sanic(config.APP_NAME)
 app.static('static/', 'static')
 app.ctx.msg = ""
 
 
-class tournement:
-    def __init__(self, name, contestant, matches, description):
-        self.name = name
-        self.contestant = contestant
-        self.matches = matches
-        self.description = description
 
-class matches:
-    def __init__(self, contestant_A,contestant_B, ):
-        self.contestant_A = contestant_A
-        self.contestant_B = contestant_B
 
 
 # Endpoints
@@ -45,7 +36,17 @@ async def tournament(request):
 
     return html(Create_tournament.show_Tournamets())
 
+
+
+@app.get("/view_tournaments")
+
+async def show_tournaments(request):
+    """display frontpage"""
+    
+    return html(show_tournament.top_bar())
+
+
 if __name__ == '__main__':
     
 
-    app.run(host='localhost', port=8080)
+    app.run(host='localhost', port=8080)    

@@ -55,7 +55,13 @@ a.button {
 	background-color:#5CF374;
 	height:50px;
 }
-
+.banner {
+    list-style: none;
+    margin-bottom: 20px;
+	width:20%;
+	background-color:#5CF374;
+	height:50px;
+}
 .menu-item {
     display: inline-block;
 	margin-top:14px;

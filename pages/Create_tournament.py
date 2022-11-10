@@ -7,7 +7,7 @@ from config import APP_NAME
 
 from pages.menu import show_menu
 
-def Create_Tournamets():
+def SC2_Create_Tournamets():
     doc = dominate.document(title="SC2 Create Tournaments")
     with doc.head:
         menu_items = [
@@ -20,14 +20,34 @@ def Create_Tournamets():
 
 def show_Tournamets():
     with ul(cls='Create_Tournamets'):
-        for (txt, lnk) in Create_Tournamets:
+        for (txt, lnk) in SC2_Create_Tournamets:
             with div(cls='Create_Tournamets'):
                     a(txt, cls='button', href=lnk)
+
+def enter_values():
+    n= int(input("enter elemets"))
+    d={}
+    for i in range (n):
+        key=input("enter KEY: ")
+        value= input("enter value")
+        d[key]=value
+    print(d)
 
 def add_contestant():
      with ul(cls='Add_contestant'):
         for (txt, lnk) in add_contestant:
             with div(cls='Add_contestant'):
-                    a(txt, cls='button', href=lnk)
-     int(import(main.py))
-     
+                    a(txt, cls='button', href=lnk)    
+     with form(enter_values)
+
+def Create_Tournaments():
+    app = Sanic.get_app(APP_NAME)
+    doc = dominate.document(title=f'{APP_NAME} | Create_Tournamets')
+
+    with doc.head:
+        link(rel='stylesheet', href=app.url_for('static',
+                                                name='static',
+                                                filename='style.css'))
+    with doc:
+        h1("Create_Tournamets", cls='page_header')
+            with div()

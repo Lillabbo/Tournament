@@ -9,6 +9,7 @@ import config
 # pages
 import pages.frontpage as frontpage
 import pages.Viewtournement as show_tournament
+import pages.Create_tournament as Create_tournament
 ###import pages.userprofile as profile###
 import pages.selfmade_classes as all_classes
 app = Sanic(config.APP_NAME)
@@ -16,6 +17,17 @@ app.static('static/', 'static')
 app.ctx.msg = ""
 
 
+
+
+# Input for dictionary
+def add_partisipants():
+    n= int(input("enter elemets"))
+    d={}
+    for i in range (n):
+        key=input("enter KEY: ")
+        value= input("enter value")
+        d[key]=value
+    print(d)
 
 
 # Endpoints
@@ -27,11 +39,12 @@ async def index_page(request):
     return html(frontpage.frontpage())
 
 
-@app.post("/create_tournaments")
+@app.get("/create_tournaments")
+
 async def tournament(request):
     """create a new tournament"""
 
-    return redirect("/")
+    return html(Create_tournament.show_Tournamets())
 
 
 

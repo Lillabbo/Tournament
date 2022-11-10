@@ -17,3 +17,17 @@ def Create_Tournamets():
         show_menu(menu_items)
                        
     return doc.render()
+
+def show_Tournamets():
+    with ul(cls='Create_Tournamets'):
+        for (txt, lnk) in Create_Tournamets:
+            with div(cls='Create_Tournamets'):
+                    a(txt, cls='button', href=lnk)
+
+def add_contestant():
+     with ul(cls='Add_contestant'):
+        for (txt, lnk) in add_contestant:
+            with div(cls='Add_contestant'):
+                    a(txt, cls='button', href=lnk)
+     int(import(main.py))
+     

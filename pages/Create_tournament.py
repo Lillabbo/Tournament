@@ -14,7 +14,6 @@ def Create_Tournamets():
             ('sc2 tournaments', '/'),
             ('sc2 Create tournaments', '/'),
         ]
-    with
         show_menu(menu_items)
                        
     return doc.render()
@@ -27,4 +26,4 @@ def show_Tournamets():
 
 
 def add_contestant():
-    import main class tournement
+    import main

@@ -45,9 +45,7 @@ def Create_Tournaments():
     doc = dominate.document(title=f'{APP_NAME} | Create_Tournamets')
 
     with doc.head:
-        link(rel='stylesheet', href=app.url_for('static',
-                                                name='static',
-                                                filename='style.css'))
+        link(rel='stylesheet', href=app.url_for())
     with doc:
         h1("Create_Tournamets", cls='page_header')
             with div()

@@ -38,7 +38,9 @@ def add_contestant():
         for (txt, lnk) in add_contestant:
             with div(cls='Add_contestant'):
                     a(txt, cls='button', href=lnk)    
-     with form(enter_values)
+     with form(enter_values):
+    
+        return()
 
 def Create_Tournaments():
     app = Sanic.get_app(APP_NAME)
@@ -50,4 +52,5 @@ def Create_Tournaments():
         ))
     with doc:
         h1("Create_Tournamets", cls='page_header')
-            with div()
+        with div(cls=button):
+            return()

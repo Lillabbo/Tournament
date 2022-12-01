@@ -1,7 +1,7 @@
 import dominate
 from dominate.tags import *
-
 from sanic import Sanic
+
 from config import APP_NAME
 
 
@@ -10,14 +10,17 @@ class tournament:
         self.name = name
         self.contestant = contestant
         self.matches = matches
-        self.description = description
+        self.description = description 
     def show_tournaments(self):
         print("...")
+        lnk = "/"+ self.name
         with div(cls="banner"):
             h1(self.name)
             p("contestants:"+ self.contestant)
             p("matches:" + self.matches)
             p("description:"+ self.description)
+            with div(cls="button"):
+                a("view more", cls='button', href=lnk)
 
 
 class matches:

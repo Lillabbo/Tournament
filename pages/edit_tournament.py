@@ -16,7 +16,8 @@ def top_bar():
     with doc:
         menu_items = [
             ('sc2 tournaments', '/'),
-            ('create tournament','/create_tournaments')
+            ('create tournament','/create_tournaments'),
+            ('view tournaments','/view_tournaments')
         ]
         show_menu(menu_items)
         p1= tournaments.tournament("T1","8","7","fake(r) tournament")

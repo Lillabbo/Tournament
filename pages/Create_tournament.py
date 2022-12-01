@@ -43,7 +43,7 @@ def show_Tournamets():
 #                     a(txt, cls='button', href=lnk)    
 #     with form()
 
-# Create_tournament CSS
+# 
 def Create_Tournaments():
     app = Sanic.get_app(APP_NAME)
     doc = dominate.document(title=f'{APP_NAME} | Create_Tournamets')
@@ -59,4 +59,5 @@ def Create_Tournaments():
                 input_(type = "text", cls = "textinput", placeholder="Skriv dit navn...", name="name")
                 #Her kan tilføjes flere felter
                 input_(type="team",cls="teaminput",) placeholder="Skriv dit "
-                input_(type="submit", value="Opret turnering", cls="button") 
+                input_(type="submit", value="Opret turnering", cls="button")
+

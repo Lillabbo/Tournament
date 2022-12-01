@@ -38,15 +38,16 @@ def add_contestant():
         for (txt, lnk) in add_contestant:
             with div(cls='Add_contestant'):
                     a(txt, cls='button', href=lnk)    
-     with form(enter_values):
-        input_()
-    
+     with form(enter_values)
 
 def Create_Tournaments():
     app = Sanic.get_app(APP_NAME)
     doc = dominate.document(title=f'{APP_NAME} | Create_Tournamets')
 
     with doc.head:
-        link(rel='stylesheet', href=app.url_for())
+        link(rel='stylesheet', href=app.url_for(
+            
+        ))
     with doc:
         h1("Create_Tournamets", cls='page_header')
+            with div()

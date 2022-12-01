@@ -24,12 +24,12 @@ def show_Tournamets():
             with div(cls='Create_Tournamets'):
                     a(txt, cls='button', href=lnk)
 
-def enter_values():
-    n= int(input("enter elemets"))
+def enter_names():
+    n= int(input("enter name"))
     d={}
     for i in range (n):
-        key=input("enter KEY: ")
-        value= input("enter value")
+        key=input("enter spiller: ")
+        value= input("enter name")
         d[key]=value
     print(d)
 
@@ -50,4 +50,4 @@ def Create_Tournaments():
         ))
     with doc:
         h1("Create_Tournamets", cls='page_header')
-            with div()
+            with div() 

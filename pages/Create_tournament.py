@@ -15,32 +15,33 @@ def SC2_Create_Tournamets():
             ('sc2 Create tournaments', '/'),
         ]
         show_menu(menu_items)
-                       
+            
     return doc.render()
 
+#Vis show_touenamets knappen
 def show_Tournamets():
     with ul(cls='Create_Tournamets'):
         for (txt, lnk) in SC2_Create_Tournamets:
             with div(cls='Create_Tournamets'):
                     a(txt, cls='button', href=lnk)
 
-def enter_values():
-    n= int(input("enter elemets"))
+#Indsæt spillerens navn til en dictionary med key
+def enter_names():
+    n= int(input("enter name"))
     d={}
     for i in range (n):
-        key=input("enter KEY: ")
-        value= input("enter value")
+        key=input("enter spiller: ")
+        value= input("enter name")
         d[key]=value
     print(d)
 
+# Opret spillere knap og indsæt navn
 def add_contestant():
-     with ul(cls='Add_contestant'):
+    with ul(cls='Add_contestant'):
         for (txt, lnk) in add_contestant:
             with div(cls='Add_contestant'):
                     a(txt, cls='button', href=lnk)    
-     with form(enter_values):
-    
-        return()
+     with form(enter_values)
 
 def Create_Tournaments():
     app = Sanic.get_app(APP_NAME)
@@ -52,5 +53,4 @@ def Create_Tournaments():
         ))
     with doc:
         h1("Create_Tournamets", cls='page_header')
-        with div(cls=button):
-            return()
+            with div()

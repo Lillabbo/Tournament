@@ -46,6 +46,7 @@ async def show_tournaments(request):
     return html(show_tournament.top_bar())
 
 
+
 if __name__ == '__main__':
     
 

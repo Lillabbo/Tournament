@@ -34,7 +34,7 @@ async def index_page(request):
 async def tournament(request):
     """create a new tournament"""
 
-    return html(Create_tournament.show_Tournamets())
+    return html(Create_tournament.Create_Tournaments())
 
 
 

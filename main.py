@@ -45,6 +45,11 @@ async def show_tournaments(request):
     
     return html(show_tournament.top_bar())
 
+@app.post("/newtournament")
+async def new_tournament(request):
+    name = request.form.get("name")
+    print(name)
+    return redirect("/")
 
 if __name__ == '__main__':
     

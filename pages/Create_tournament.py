@@ -26,14 +26,16 @@ def show_Tournamets():
                     a(txt, cls='button', href=lnk)
 
 #Indsæt spillerens navn til en dictionary med key
-# def enter_names():
-#     n= input("enter name")
-#     d={}
-#     for i in range (n):
-#         key=input("enter spiller: ")
-#         value= input("enter name")
-#         d[key]=value
-#     print(d)
+ def enter_names():
+     n= form(method="recall_name")
+        input_(type="text")
+         #("enter name")
+     d={}
+     for i in range (n):
+         key=input("enter spiller: ")
+         value= input("enter name")
+         d[key]=value
+     print(d)
 
 # # Opret spillere knap og indsæt navn
 # def add_contestant():
@@ -57,7 +59,5 @@ def Create_Tournaments():
 
             with form(method="POST", action="/newtournament"):
                 input_(type = "text", cls = "textinput", placeholder="Skriv dit navn...", name="name")
-                #Her kan tilføjes flere felter
-                input_(type="team",cls="teaminput",) placeholder="Skriv dit "
                 input_(type="submit", value="Opret turnering", cls="button")
 

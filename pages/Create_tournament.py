@@ -56,7 +56,7 @@ def Create_Tournaments():
 
             with form(method="POST", action="/newtournament"):
                 input_(type = "text", cls = "textinput", placeholder="Skriv dit navn...", name="name")
-                input_(type = "Antal_Kampe", cls = "Kampplads", placeholder="0", name="name")
+                input_(type = "Antal deltagere", cls = "textinput", placeholder="antal deltagere...", name="antal deltagere")
                 input_(type="submit", value="Opret turnering", cls="button")
     return doc.render()
 

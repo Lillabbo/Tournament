@@ -18,7 +18,6 @@ def SC2_Create_Tournamets():
             
     return doc.render()
 
-Player = {'victories':}
 
 #Indsæt spillerens navn til en dictionary med key
 def enter_names():
@@ -76,6 +75,7 @@ def Create_Tournaments():
                 tpart=str(input_(type = "number of participants", cls = "textinput", placeholder="type in number of participants...", participants="participants"))
                 tdesc=str(input_(type="description", cls="textinput", placeholder="description...", desc="description"))
                 input_(type="submit", value="Opret turnering", cls="button")
-                p1=tournaments.tournament(tname,tpart,"0",tdesc)
+                p=tournaments.tournament(tname,tpart,"0",tdesc)
+                p=p+"1"
     return doc.render()
 

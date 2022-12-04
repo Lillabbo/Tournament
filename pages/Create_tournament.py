@@ -6,6 +6,8 @@ from config import APP_NAME
 
 import pages.selfmade_classes as tournaments
 from pages.menu import show_menu
+import main as main
+
 
 def SC2_Create_Tournamets():
     doc = dominate.document(title="SC2 Create Tournaments")
@@ -31,6 +33,20 @@ def enter_names():
          d[key]=value
     print(d)
 
+#//////////////////////////////////////////////////////////////
+ # Den anden version   
+
+# def enter_names():
+#     n= ("enter name")
+#     d={}
+#     for i in range (n):
+#          key=input("enter spiller: ")
+#          value= input("enter name")
+#          d[key]=value
+#     print(d)
+
+
+#//////////////////////////////////////////////////////////////
 # # Opret spillere knap og indsæt navn
 # def add_contestant():
 #     with ul(cls='Add_contestant'):
@@ -61,7 +77,6 @@ def Create_Tournaments():
                 tpart=str(input_(type = "number of participants", cls = "textinput", placeholder="type in number of participants...", participants="participants"))
                 tdesc=str(input_(type="description", cls="textinput", placeholder="description...", desc="description"))
                 input_(type="submit", value="Opret turnering", cls="button")
-                p=tournaments.tournament(tname,tpart,"0",tdesc)
-                p=p+"1"
+                main.all_tournaments.append(tournaments.tournament(tname,tpart,"0",tdesc))
     return doc.render()
 

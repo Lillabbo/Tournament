@@ -18,7 +18,7 @@ app.ctx.msg = ""
 
 
 
-
+all_tournaments=[]
 
 # Endpoints
 @app.get("/")

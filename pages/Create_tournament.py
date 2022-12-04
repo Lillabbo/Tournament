@@ -4,7 +4,7 @@ from dominate.tags import *
 from sanic import Sanic
 from config import APP_NAME
 
-
+import pages.selfmade_classes as tournaments
 from pages.menu import show_menu
 
 def SC2_Create_Tournamets():
@@ -58,9 +58,10 @@ def Create_Tournaments():
         with div(cls='SC2 Create Tournaments'):
 
             with form(method="POST", action="/newtournament"):
-                input_(type = "text", cls = "textinput", placeholder="type in tournament name...", name="name")
-                input_(type = "number of participants", cls = "textinput", placeholder="type in number of participants...", name="name")
-                input_(type="description", cls="textinput", placeholder="description...")
+                tname=str(input_(type = "text", cls = "textinput", placeholder="type in tournament name...", name="name"))
+                tpart=str(input_(type = "number of participants", cls = "textinput", placeholder="type in number of participants...", participants="participants"))
+                tdesc=str(input_(type="description", cls="textinput", placeholder="description...", desc="description"))
                 input_(type="submit", value="Opret turnering", cls="button")
+                p1=tournaments.tournament(tname,tpart,"0",tdesc)
     return doc.render()
 

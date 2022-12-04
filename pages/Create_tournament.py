@@ -18,6 +18,8 @@ def SC2_Create_Tournamets():
             
     return doc.render()
 
+Player = {'victories':}
+
 #Indsæt spillerens navn til en dictionary med key
 def enter_names():
     n= form(method="recall_name")
@@ -30,6 +32,20 @@ def enter_names():
          d[key]=value
     print(d)
 
+#//////////////////////////////////////////////////////////////
+ # Den anden version   
+
+# def enter_names():
+#     n= ("enter name")
+#     d={}
+#     for i in range (n):
+#          key=input("enter spiller: ")
+#          value= input("enter name")
+#          d[key]=value
+#     print(d)
+
+
+#//////////////////////////////////////////////////////////////
 # # Opret spillere knap og indsæt navn
 # def add_contestant():
 #     with ul(cls='Add_contestant'):

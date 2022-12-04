@@ -47,7 +47,9 @@ a.button {
 .post img {
     max-width: 100%;
 }
-
+.textinput {
+    width: 200px;
+}
 .menu {
     list-style: none;
     margin-bottom: 20px;

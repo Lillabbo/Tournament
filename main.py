@@ -34,7 +34,7 @@ async def index_page(request):
 async def tournament(request):
     """create a new tournament"""
 
-    return html(Create_tournament.show_Tournamets())
+    return html(Create_tournament.Create_Tournaments())
 
 
 
@@ -50,6 +50,7 @@ async def new_tournament(request):
     name = request.form.get("name")
     print(name)
     return redirect("/")
+
 
 if __name__ == '__main__':
     

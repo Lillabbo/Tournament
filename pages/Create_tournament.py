@@ -18,13 +18,6 @@ def SC2_Create_Tournamets():
             
     return doc.render()
 
-#Vis show_touenamets knappen
-def show_Tournamets():
-    with ul(cls='Create_Tournamets'):
-        for (txt, lnk) in SC2_Create_Tournamets:
-            with div(cls='Create_Tournamets'):
-                    a(txt, cls='button', href=lnk)
-
 #Indsæt spillerens navn til en dictionary med key
  def enter_names():
      n= form(method="recall_name")
@@ -49,15 +42,22 @@ def show_Tournamets():
 def Create_Tournaments():
     app = Sanic.get_app(APP_NAME)
     doc = dominate.document(title=f'{APP_NAME} | Create_Tournamets')
-
+   
     with doc.head:
+        menu_items = [
+            ('sc2 tournaments', '/'),
+            ('sc2 Create tournaments', '/'),
+        ]
+        show_menu(menu_items)
         link(rel='stylesheet', href=app.url_for('static', name="static", filename="style.css"))
     with doc:
-        h1("Create_Tournamets", cls='page_header')
+        h1("Create Tournaments", cls='page_header')
         with div(cls='SC2 Create Tournaments'):
-            header.header()
 
             with form(method="POST", action="/newtournament"):
                 input_(type = "text", cls = "textinput", placeholder="Skriv dit navn...", name="name")
+                #Her kan tilføjes flere felter
+                input_(type="team",cls="teaminput", placeholder="Skriv dit ")
                 input_(type="submit", value="Opret turnering", cls="button")
+    return doc.render()
 

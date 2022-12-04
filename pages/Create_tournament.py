@@ -6,56 +6,9 @@ from config import APP_NAME
 
 import pages.selfmade_classes as tournaments
 from pages.menu import show_menu
-import main as main
+all_tournaments={}
 
 
-def SC2_Create_Tournamets():
-    doc = dominate.document(title="SC2 Create Tournaments")
-    with doc.head:
-        menu_items = [
-            ('sc2 tournaments', '/'),
-            ('sc2 Create tournaments', '/'),
-        ]
-        show_menu(menu_items)
-            
-    return doc.render()
-
-
-#Indsæt spillerens navn til en dictionary med key
-def enter_names():
-    n= form(method="recall_name")
-    input_(type="text")
-         #("enter name")
-    d={}
-    for i in range (n):
-         key=input("enter spiller: ")
-         value= input("enter name")
-         d[key]=value
-    print(d)
-
-#//////////////////////////////////////////////////////////////
- # Den anden version   
-
-# def enter_names():
-#     n= ("enter name")
-#     d={}
-#     for i in range (n):
-#          key=input("enter spiller: ")
-#          value= input("enter name")
-#          d[key]=value
-#     print(d)
-
-
-#//////////////////////////////////////////////////////////////
-# # Opret spillere knap og indsæt navn
-# def add_contestant():
-#     with ul(cls='Add_contestant'):
-#         for (txt, lnk) in add_contestant:
-#             with div(cls='Add_contestant'):
-#                     a(txt, cls='button', href=lnk)    
-#     with form()
-
-# 
 def Create_Tournaments():
     app = Sanic.get_app(APP_NAME)
     doc = dominate.document(title=f'{APP_NAME} | Create_Tournamets')
@@ -74,9 +27,9 @@ def Create_Tournaments():
 
             with form(method="POST", action="/newtournament"):
                 tname=str(input_(type = "text", cls = "textinput", placeholder="type in tournament name...", name="name"))
-                tpart=str(input_(type = "number of participants", cls = "textinput", placeholder="type in number of participants...", participants="participants"))
-                tdesc=str(input_(type="description", cls="textinput", placeholder="description...", desc="description"))
+                tpart=str(input_(type = "text", cls = "textinput", placeholder="type in number of participants...", name="nparti"))
+                tdesc=str(input_(type="text", cls="textinput", placeholder="description...", name="desc"))
                 input_(type="submit", value="Opret turnering", cls="button")
-                main.all_tournaments.append(tournaments.tournament(tname,tpart,"0",tdesc))
+                all_tournaments.update({tname:tournaments.tournament(tname,tpart,"0",tdesc)})
     return doc.render()
 

@@ -11,16 +11,16 @@ class tournament:
         self.contestant = contestant
         self.matches = matches
         self.description = description 
+        
     def show_tournaments(self):
         print("...")
-        lnk = "/"+ self.name
         with div(cls="banner"):
             h1(self.name)
-            p("contestants:"+ self.contestant)
+            p("contestants:"+ self.contestant, )
             p("matches:" + self.matches)
             p("description:"+ self.description)
             with div(cls="button"):
-                a("view more", cls='button', href=lnk)
+                a("view more", cls='button', href="/editor")
 
 
 class matches:

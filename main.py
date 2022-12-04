@@ -10,6 +10,7 @@ import config
 import pages.frontpage as frontpage
 import pages.Viewtournement as show_tournament
 import pages.Create_tournament as Create_tournament
+import pages.edit_tournament as edit_tournament
 ###import pages.userprofile as profile###
 import pages.selfmade_classes as all_classes
 app = Sanic(config.APP_NAME)
@@ -18,7 +19,7 @@ app.ctx.msg = ""
 
 
 
-all_tournaments=[]
+
 
 # Endpoints
 @app.get("/")
@@ -51,6 +52,13 @@ async def new_tournament(request):
     print(name)
     return redirect("/")
 
+
+@app.get("/editor")
+
+async def editor_page(request):
+    """display frontpage"""
+    
+    return html(edit_tournament.editor())
 
 if __name__ == '__main__':
     

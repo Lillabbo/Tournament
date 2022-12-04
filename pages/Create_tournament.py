@@ -56,8 +56,6 @@ def Create_Tournaments():
 
             with form(method="POST", action="/newtournament"):
                 input_(type = "text", cls = "textinput", placeholder="Skriv dit navn...", name="name")
-                #Her kan tilføjes flere felter
-                input_(type="team",cls="teaminput", placeholder="Skriv dit ")
                 input_(type="submit", value="Opret turnering", cls="button")
     return doc.render()
 

@@ -72,8 +72,9 @@ def Create_Tournaments():
         with div(cls='SC2 Create Tournaments'):
 
             with form(method="POST", action="/newtournament"):
-                input_(type = "text", cls = "textinput", placeholder="Skriv dit navn...", name="name")
-                input_(type = "Antal deltagere", cls = "textinput", placeholder="antal deltagere...", name="antal deltagere")
+                input_(type = "text", cls = "textinput", placeholder="type in tournament name...", name="name")
+                input_(type = "number of participants", cls = "textinput", placeholder="type in number of participants...", name="name")
+                input_(type="description", cls="textinput", placeholder="description...")
                 input_(type="submit", value="Opret turnering", cls="button")
     return doc.render()
 

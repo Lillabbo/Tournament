@@ -47,6 +47,7 @@ def Create_Tournaments():
         menu_items = [
             ('sc2 tournaments', '/'),
             ('sc2 Create tournaments', '/'),
+            ('view tournaments','/view_tournaments')
         ]
         show_menu(menu_items)
         link(rel='stylesheet', href=app.url_for('static', name="static", filename="style.css"))

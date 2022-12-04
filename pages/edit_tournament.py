@@ -9,6 +9,20 @@ from pages.menu import show_menu
 import pages.selfmade_classes as tournaments
 contestant_names=[]
 
+#Indsæt spillerens navn til en dictionary med key og find navn ved at søge
+# def seach_player():
+#     n= form(method="recall_name")
+#     input_(type="text",cls="input name",placeholder="skriv navn du leder efter...",name="seach player")
+#     d={}
+#     for i in range (n):
+#          key=input("enter spiller: ")
+#          value= input("enter name")
+#          d[key]=value
+#     print(d)
+
+
+
+
 def top_bar():
     doc = dominate.document(title="SC2 Tournaments")
     with doc.head:
